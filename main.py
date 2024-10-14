@@ -3,7 +3,8 @@ import requests
 
 app = FastAPI()
 
-API_KEY = "ff6cd0e4471af05616572057"
+
+API_KEY = "ваш-API-KEY"
 BASE_URL = f"https://v6.exchangerate-api.com/v6/"
 
 
@@ -12,10 +13,13 @@ async def currency_converter(from_currency: str, to_currency: str, value: float)
     """
     Конвертирует значение из одной валюты в другую.
 
-    :param from_currency: Исходная валюта
-    :param to_currency: Целевая валюта
-    :param value: Значение для конвертации
-    :return: Словарь с результатом конвертации, округленным до двух знаков после запятой.
+    Args:
+        from_currency: Исходная валюта
+        to_currency: Целевая валюта
+        value: Значение для конвертации
+
+    Returns:
+        Словарь с результатом конвертации, округленным до двух знаков после запятой.
 
     """
 
